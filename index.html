@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Great Race</title>
+
+    <style media="screen">
+      body {
+        text-align: center;
+      }
+
+      @keyframes sleep
+      {
+        0% { transform: scale(1,1); }
+        50% { transform: scale(0.9,0.9); }
+        100% { transform: scale(1,1); }
+      }
+
+      .sprite {
+        width: 175px;
+        height: 175px;
+        position: absolute;
+        opacity: 0.5;
+        transition: opacity 0.3s;
+      }
+
+      .sprite div {
+        width: 175px;
+        height: 175px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .sprite:focus {
+        opacity: 1;
+        outline: 0;
+      }
+
+      .sprite.oriented {
+        transition: transform 0.3s;
+      }
+
+      .sprite.north {
+        transform: rotate(-90deg);
+      }
+
+      .sprite.west {
+        transform: rotate(180deg);
+      }
+
+      .sprite.south {
+        transform: rotate(90deg);
+      }
+
+      .sprite.exhausted div {
+        animation: sleep 1s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950)
+      }
+
+      #scene {
+        width: 1200px;
+        height: 800px;
+        margin: 2em auto;
+        background: url(images/racetrack.jpeg);
+        position: relative;
+      }
+    </style>
+
+    <script src="game.js?3"></script>
+  </head>
+  <body>
+
+
+    <div id="scene"></div>
+
+  </body>
+</html>
