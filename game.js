@@ -171,6 +171,12 @@ window.onload = function() {
   var turtle = new Character("images/turtle.png", 5, 100);
   turtle.attachTo(_scene, 100, 0)
 
+  var turtle2 = new Character("images/turtle.png", 5, 100);
+  turtle2.attachTo(_scene, 300, 0)
+
+  var turtle3 = new Character("images/turtle.png", 5, 100);
+  turtle3.attachTo(_scene, 250, 150)
+
   var hare = new Character("images/hare.png", 20, 15);
   hare.attachTo(_scene, 100, 150);
 }
